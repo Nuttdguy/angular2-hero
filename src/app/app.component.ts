@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+export class Hero {
+	id: number;
+	name: string;
+}
 
 @Component({
   moduleId: module.id,
@@ -6,6 +10,11 @@ import { Component } from '@angular/core';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css']
 })
+
 export class AppComponent {
-  title = 'Oh boy, this definitely is more complicated than the starter files!';
+  title = 'Tour of Heroes';
+  hero = {
+		id: 1,
+		name: 'Windstorm'
+  }
 }
