@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 
-export class Hero {
-  id: number;
-  name: string;
-}
+import { Hero } from '../app/classes_global/hero';
+import { HeroDetailComponent } from './hero_details/hero-detail.component';
 
 const HEROES: Hero[] = [
   { id: 11, name: 'Mr. Nice' },
@@ -22,7 +20,8 @@ const HEROES: Hero[] = [
   moduleId: module.id,
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css']
+  styleUrls: ['app.component.css'],
+  directives: [ HeroDetailComponent ]
 })
 
 export class AppComponent {
@@ -31,7 +30,7 @@ export class AppComponent {
   selectedHero: Hero;
 
   onSelect(hero: Hero) { 
-  	this.selectedHero = hero; 
+  	this.selectedHero = hero;
   }
 
 }
